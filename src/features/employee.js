@@ -135,12 +135,8 @@
   handleRedirect('../employee-form/index.html')
   employeesData?.forEach(employee => {
     document.querySelector(`button[name="delete-${employee.id}"]`)?.addEventListener('click', (e) => {
-      const name = e.target.name
-      if (name) {
-        const currentId = name.split('-')[1]
-        handleDeleteEmployee(currentId)
+        handleDeleteEmployee(employee.id)
         window.location.reload()
-      }
     })
   })
 })();

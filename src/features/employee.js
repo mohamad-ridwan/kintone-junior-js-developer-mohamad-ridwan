@@ -97,7 +97,7 @@
   // filter employees table feature
   const searchEmployee = () => {
     // validate employee data if empty
-    if (employeesData?.length === undefined || employeesData.length === 0) {
+    if (employeesData?.length === undefined || !employeesData?.[0]?.id) {
       return
     }
 

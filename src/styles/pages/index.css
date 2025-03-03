@@ -104,6 +104,11 @@ h1 {
     font-size: 0.85rem;
 }
 
+.disabled-btn{
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 3rem 2%;

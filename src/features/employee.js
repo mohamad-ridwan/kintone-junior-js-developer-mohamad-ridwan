@@ -58,13 +58,12 @@
     }
   }
   const employeesData = await getEmployeesData()
-  const employeesFilterData = await getEmployeesData()
 
   // created display table for reuse it
   // display employees table
   const displayEmployeeTable = (employeesData) => {
     // validate employee data to empty data
-    if (employeesData?.length === undefined || employeesData.length === 0) {
+    if (employeesData?.length === undefined || !employeesData?.[0]?.id) {
       employessTableEl.innerHTML = `
         <p>${employeeDataEmptyMsg}</p>
       `
@@ -85,7 +84,7 @@
               <td>${employee.id}</td>
               <td style="min-width: 100px;">${employee.name}</td>
               <td>${employee.position}</td>
-              <td><button name="delete-${employee.id}" class="btn" style="background-color: #ff0000 !important;">
+              <td><button name="delete-${employee.id}" type="button" class="btn" style="background-color: #ff0000 !important;">
                 <span class="btn-text">Delete</span>
               </button></td>
             </tr>
@@ -119,9 +118,6 @@
         return errResponseMsg
       }
       const result = await response.json()
-      if (result?.length === undefined) {
-        return errResponseMsg
-      }
       return result
     } catch (error) {
       return errResponseMsg
@@ -133,10 +129,20 @@
   displayEmployeeTable(employeesData)
   searchEmployee()
   handleRedirect('../employee-form/index.html')
-  employeesData?.forEach(employee => {
-    document.querySelector(`button[name="delete-${employee.id}"]`)?.addEventListener('click', (e) => {
-        handleDeleteEmployee(employee.id)
+
+  // created the click event for delete the employee
+  if (employeesData?.[0]?.id) {
+    employeesData.forEach(employee => {
+      document.querySelector(`button[name="delete-${employee.id}"]`)?.addEventListener('click', async (e) => {
+        const result = await handleDeleteEmployee(employee.id)
+        if (!result?.id) {
+          alert(errResponseMsg)
+          return
+        } else {
+          alert('Successfully deleted employee!')
+        }
         window.location.reload()
+      })
     })
-  })
+  }
 })();

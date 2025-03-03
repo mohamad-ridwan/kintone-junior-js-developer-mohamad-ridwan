@@ -104,6 +104,14 @@
         ...employeeForm,
         [event.target.name]: event.target.value
       }
+
+      if(Object.keys(validateForm()).length > 0){
+        document.querySelector('#submitForm').setAttribute('class', 'disabled-btn btn submit-btn')
+        document.querySelector('#submitForm').disabled = true
+      }else{
+        document.querySelector('#submitForm').setAttribute('class', 'btn submit-btn')
+        document.querySelector('#submitForm').disabled = false
+      }
     })
   }
 

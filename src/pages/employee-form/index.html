@@ -1,0 +1,66 @@
+<!-- Form Page to add new data -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Data Form</title>
+
+  <!-- import styles.css -->
+  <link rel="stylesheet" href="../../styles/pages/employee-form/index.css">
+  <link rel="stylesheet" href="../../styles/pages/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="section">
+        <h1 class="title">Employee Data Form</h1>
+      </div>
+
+      <!-- Form -->
+      <div class="section">
+        <h1 class="section-title">Employee Form</h1>
+        <form class="form" id="employeeForm">
+          <div class="input-container employee-input-container">
+            <label for="id" class="label">Employee ID</label>
+            <input name="id" id="input-employees-filter" type="password" class="input-component employee-input" readonly
+              placeholder="Type Employee ID here..." disabled>
+          </div>
+          <div class="input-container employee-input-container">
+            <label for="name" class="label">Employee Name</label>
+            <input name="name" id="input-employees-filter" type="text" class="input-component employee-input"
+              placeholder="Type Employee Name here...">
+          </div>
+          <div class="input-container employee-input-container">
+            <label for="position" class="label">Employee Position</label>
+            <input name="position" id="input-employees-filter" type="text" class="input-component employee-input"
+              placeholder="Type Employee Position here...">
+          </div>
+
+          <!-- Submit Button -->
+          <button id="submitForm" type="submit" name="Add Employee" class="btn submit-btn">
+            <span class="btn-text">
+              Add Employee
+            </span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Back button (to index) -->
+      <button id="backToEmployee" name="Click Back To Employee" class="btn">
+        <span class="btn-text">
+          Back to Employees Data
+        </span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- import form-script.js -->
+  <script src="../../features/employee-form.js"></script>
+</body>
+
+</html>

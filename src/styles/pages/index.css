@@ -1,0 +1,120 @@
+body {
+    padding: 0px !important;
+    margin: 0 !important;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10%;
+    width: 100%;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* title */
+.title {
+    font-size: 1.3rem;
+}
+
+/* btn components */
+.btn {
+    padding: 0.55rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #45b6fe;
+    text-decoration: none;
+    width: fit-content;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 9px -5px;
+    height: fit-content;
+}
+
+.btn .btn-text {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* section title */
+.section-title {
+    font-size: 0.9rem;
+}
+
+/* input */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
+    gap: 5px;
+}
+
+.input-component {
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+    border: none;
+    outline: 1px solid #45b6fe;
+    padding: 10px 12px;
+}
+
+.input-component::placeholder {
+    color: #aaa;
+}
+
+/* form */
+.form {
+    background-color: #ddd;
+    border-radius: 10px;
+    min-width: 768px;
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    height: fit-content;
+    padding: 1rem;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 3rem 2%;
+    }
+
+    .form {
+        min-width: auto;
+        max-width: auto;
+    }
+    .input-container {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

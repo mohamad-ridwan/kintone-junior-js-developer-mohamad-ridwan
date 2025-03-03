@@ -1,0 +1,15 @@
+{
+  "name": "junior-hands-on-take-home-test",
+  "version": "1.0.0",
+  "description": "Welcome to this screening test! You will build a simple **Employee Management System** using **Vanilla JavaScript**, **HTML**, and **CSS**. This system will allow users to **manage employees** using `JSON Server`.",
+  "main": "script.js",
+  "scripts": {
+    "start:json": "json-server --watch db.json --port 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  },
+  "keywords": []
+}

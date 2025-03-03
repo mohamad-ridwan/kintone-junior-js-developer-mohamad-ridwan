@@ -1,0 +1,53 @@
+<!-- Index Page to filter and display data -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Data</title>
+
+  <!-- import styles.css -->
+  <link rel="stylesheet" href="../../styles/pages/index.css">
+  <link rel="stylesheet" href="../../styles/pages/employee/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="section">
+        <h1 class="title">Employee Data</h1>
+
+        <!-- Button to navigate to form -->
+        <button id="addEmployees" name="Click Form" class="btn">
+          <span class="btn-text">
+            Add Employees
+          </span>
+        </button>
+      </div>
+
+      <!-- Filter Component -->
+      <div class="section">
+        <h1 class="section-title">Filter Employee</h1>
+        <div class="input-container">
+          <input id="input-employees-filter" type="text" class="input-component"
+            placeholder="Type to filter Employee data by name here...">
+        </div>
+      </div>
+
+      <!-- Table to display data -->
+      <div id="employees-table-container">
+        <div id="table-wrapper">
+          <!-- the table will be displayed as a children here -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- import index-script.js -->
+    <script src="../../features/employee.js"></script>
+  </div>
+</body>
+
+</html>
